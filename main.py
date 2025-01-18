@@ -83,4 +83,5 @@ for section in configs.sections():
         logging.error(e)
 
 # 推送消息
-send_message.send_server_chan(config.SCKEY, s_title, s_content)
+
+send_message.send_pushplus(config.PUSH_TOKEN, s_title, s_content)
