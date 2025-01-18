@@ -12,16 +12,7 @@ on:
 
 env:
   TZ: Asia/Shanghai
- workflow_dispatch:
-    logLevel:
-      description: 'Log level'
-      required: true
-      default: 'warning'
-      type: choice
-      options:
-        - info
-        - warning
-        - debug
+ 
 permissions:
   contents: read
 
