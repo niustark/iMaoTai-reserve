@@ -44,8 +44,8 @@ jobs:
 
       - name: start run
         env:
-#          PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
-          SCKEY: ${{ secrets.SCKEY }}
+        PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
+#          SCKEY: ${{ secrets.SCKEY }}
           PRIVATE_AES_KEY: ${{ secrets.PRIVATE_AES_KEY }}
         run: |
           python main.py
