@@ -1,5 +1,6 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
 name: imaotai-action
 
 on:
@@ -41,11 +42,11 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-
+            
       - name: start run
         env:
-#          PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
-          SCKEY: ${{ secrets.SCKEY }}
+          PUSHPLUS_KEY: ${{ secrets.PUSHPLUS_KEY }}
+#          SCKEY: ${{ secrets.SCKEY }}
           PRIVATE_AES_KEY: ${{ secrets.PRIVATE_AES_KEY }}
         run: |
           python main.py
